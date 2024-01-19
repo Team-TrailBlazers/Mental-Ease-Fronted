@@ -25,4 +25,5 @@ function StripePayment() {
     </div>
   );
 }
+
 export default StripePayment;

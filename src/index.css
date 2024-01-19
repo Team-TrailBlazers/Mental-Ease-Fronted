@@ -1,0 +1,10 @@
+
+* {
+  overflow-x: hidden;
+}
+
+.errors {
+  color: red;
+  align-self: flex-start;
+  font-style: italic;
+}   

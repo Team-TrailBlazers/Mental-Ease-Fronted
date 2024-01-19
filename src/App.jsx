@@ -3,7 +3,9 @@ import "./App.css";
 import StripePayment from "./Pages/StripePayment";
 import Success from "./Pages/Success";
 import Home from "./Pages/Home";
-import Navbar from "./Components/Navbar";
+import Navbar from "./Components/NavBar/Navbar";
+import Register from "./Pages/Register/Register";
+import Login from "./Pages/Login/Login";
 
 function App() {
   return (
@@ -11,7 +13,9 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/auth/register" element={<Register/>} />
+          <Route path="/auth/login" element={<Login/>} />
           <Route path="/stripe" element={<StripePayment />} />
           <Route path="/success" element={<Success />} />
         </Routes>
