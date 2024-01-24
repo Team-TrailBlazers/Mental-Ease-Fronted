@@ -7,7 +7,7 @@ function StripePayment() {
     console.log("Button clicked");
     axios
       .post(`${apidomain}/api/create-checkout-session`, {
-        clientAppoinmentID: [{ id: 10 }],
+        clientAppoinmentID: [{ id: 11 }],
       })
       .then((res) => {
         const { url } = res.data;

@@ -8,12 +8,12 @@ function Navbar() {
         <li>
           <Link to="/home">Home</Link>
         </li>
-        {/* <li>
+        <li>
           <Link to="/stripe">Stripe</Link>
         </li>
         <li>
           <Link to="/success">Success</Link>
-        </li> */}
+        </li>
         <li>
           <Link to="/auth/register">Register</Link>
         </li>
