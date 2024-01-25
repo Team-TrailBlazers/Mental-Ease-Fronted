@@ -3,10 +3,13 @@ import axios from "axios";
 import { apidomain } from "./../Utils/apiDomain";
 
 function StripePayment() {
+
+  const UserID = "15";
   const handleCheckout = async () => {
     console.log("Button clicked");
     axios
       .post(`${apidomain}/api/create-checkout-session`, {
+        UserID: UserID,
         clientAppoinmentID: [{ id: 11 }],
       })
       .then((res) => {
