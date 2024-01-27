@@ -38,7 +38,8 @@ function Register() {
         .then((response) => {
             console.log(response.data.message);
             toast.success(response.data.message, toastStyles.success);
-            // navigate("/auth/login");
+            navigate("/auth/login");
+            reset();
         })
         .catch((error) => {
             // console.log(error.response.data.message);

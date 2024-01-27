@@ -3,10 +3,10 @@ import "./App.css";
 import { ToastContainer } from "react-toastify";
 import StripePayment from "./Pages/StripePayment";
 import Success from "./Pages/Success";
-import Home from "./Pages/Home";
 import Navbar from "./Components/NavBar/Navbar";
 import Register from "./Pages/Register/Register";
 import Login from "./Pages/Login/Login";
+import { Home } from './Pages/Home/Home';
 
 function App() {
   return (
