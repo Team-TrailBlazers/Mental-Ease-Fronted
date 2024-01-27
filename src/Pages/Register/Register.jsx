@@ -1,12 +1,14 @@
 import React from 'react'
-import './register.css'
+import './register-login.css'
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useNavigate } from "react-router-dom";
 import Axios from "axios";
 import { apidomain } from '../../Utils/apiDomain';
-
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { toastStyles } from '../../../toastConfig';
 
 
 const schema = yup.object().shape({
@@ -32,14 +34,15 @@ function Register() {
 
 
     const onSubmit = (data) => {
-        
         Axios.post(`${apidomain}/api/auth/register`, data)
         .then((response) => {
-            console.log(response);
-            navigate("/auth/login");
+            console.log(response.data.message);
+            toast.success(response.data.message, toastStyles.success);
+            // navigate("/auth/login");
         })
-        .catch((err) => {
-            console.log(err);
+        .catch((error) => {
+            // console.log(error.response.data.message);
+            toast.error(error.response.data.message, toastStyles.error);
         });
         console.log(data);
     };

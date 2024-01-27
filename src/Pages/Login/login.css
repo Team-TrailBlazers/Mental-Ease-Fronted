@@ -1,0 +1,18 @@
+/* centered the login form */
+
+#login-form{
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    position: absolute;
+    width: 50%;
+    height: 50%;
+}
+
+@media screen and (max-width: 600px) {
+    #login-form{
+        width: 100%;
+    }
+}

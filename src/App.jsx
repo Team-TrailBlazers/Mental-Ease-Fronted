@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
+import { ToastContainer } from "react-toastify";
 import StripePayment from "./Pages/StripePayment";
 import Success from "./Pages/Success";
 import Home from "./Pages/Home";
@@ -19,6 +20,7 @@ function App() {
           <Route path="/stripe" element={<StripePayment />} />
           <Route path="/success" element={<Success />} />
         </Routes>
+        <ToastContainer />
       </Router>
     </>
   );

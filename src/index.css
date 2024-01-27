@@ -1,10 +1,30 @@
 
-* {
-  overflow-x: hidden;
+
+/* root */
+:root{
+  --main-color : ##F9F9F9;
+  --button-color: #176B87;  
+  --white-color: #fff;
+  --hover-btn-color: #007bff;
+  --form-bg-color: #F7F7F7;
+  --text-color: #333;
 }
 
-.errors {
-  color: red;
-  align-self: flex-start;
-  font-style: italic;
-}   
+
+/* body */
+body{
+  background-color: var(--main-color);
+  font-family: 'Roboto', sans-serif;
+  
+}
+
+
+* {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+ 

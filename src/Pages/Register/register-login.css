@@ -5,7 +5,6 @@
     width: 50%;
     margin-top: 20px;
     margin-bottom: 20px;
-    /* background-color: #f0ece9; */
     border-radius: 10px;
     margin: auto;
 }
@@ -15,7 +14,6 @@
     font-weight: 600;
     margin: 15px 0;
     text-align: center;
-
 }
 
 form {
@@ -24,31 +22,31 @@ form {
     align-items: center;
     margin: 20px;
     padding: 20px;
-    /* width: 500px; */
-    border: 1px solid #00000057;
-    background-color: #f0ece9; 
+    border: 1px solid #2e1f1f57;
+    background-color: var(--form-bg-color);
+    border-radius: 14px;
 }
 
 form label {
     align-self: flex-start;
     font-size: 18px;
     font-weight: 600; 
+    color: var(--text-color);
 }
 
 form input {
     padding: 5px;
-    /* margin-bottom: 10px; */
     align-self: flex-start;
     width: 90%;
     font-size: 15px;
     border-radius: 5px;
-    outline: none;
+    border: 1.5px #333 solid;
 }
 
 form button {
     padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
+    background-color: var(--button-color);
+    color: var(--white-color);
     border: none;
     cursor: pointer;
     width: 50%;
@@ -59,7 +57,7 @@ form button {
 
 
 form button:hover {
-    background-color: rgba(11, 85, 165, 0.589)
+    background-color: var(--hover-btn-color);
 }
 
 /* media query at max-width of 600px */
@@ -100,6 +98,11 @@ form button:hover {
         font-weight: 500;
         border-radius: 7px;
     }
+}
 
-
+@media screen and (max-width: 320px) {
+    .register_title{
+        font-size: 15px;
+        margin: 5px 0;
+    }
 }
