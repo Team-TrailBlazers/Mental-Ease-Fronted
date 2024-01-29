@@ -43,17 +43,39 @@ form input {
     border: 1.5px #333 solid;
 }
 
-form button {
-    padding: 10px 20px;
-    background-color: var(--button-color);
+.auth_button {
+    position: relative;
+	padding: 10px 20px;
+	background-color: var(--button-color);
     color: var(--white-color);
-    border: none;
-    cursor: pointer;
-    width: 50%;
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
     font-size: 18px;
-    font-weight: 600;
-    border-radius: 10px;
+    width: 40%;
 }
+
+.auth_button.loading{
+    cursor: not-allowed;
+}
+
+.spinner {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	border: 2px solid #f3f3f3;
+	border-top: 2px solid #3498db;
+	border-radius: 50%;
+	animation: spin 1s linear infinite;
+	right: 10px;
+	top: 50%;
+	transform: translateY(-50%); 
+  }
+
+  @keyframes spin {
+	0% { transform: translateY(-50%) rotate(0deg); }
+	100% { transform: translateY(-50%) rotate(360deg); }
+  }
 
 
 form button:hover {
@@ -92,7 +114,6 @@ form button:hover {
 
     form button {
         padding: 7px 10px;
-        cursor: pointer;
         width: 60%;
         font-size: 15px;
         font-weight: 500;
