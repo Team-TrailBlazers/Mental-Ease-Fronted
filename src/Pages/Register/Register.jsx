@@ -35,6 +35,7 @@ function Register() {
 
 
     const onSubmit = (data) => {
+        
         setLoading(true);
         Axios.post(`${apidomain}/api/auth/register`, data)
         .then((response) => {
@@ -89,7 +90,7 @@ function Register() {
 
             <br />
 
-            <button type="submit" className={`auth_button ${loading ? 'loading' : ''}`}>
+            <button type="submit" className={`auth_button ${loading ? 'loading' : ''}`} disabled={loading}>
                 {loading ? 'Please wait...' : 'Register'}
                 {loading && <div className="spinner"></div>}
                 </button>
