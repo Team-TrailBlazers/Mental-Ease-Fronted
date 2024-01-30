@@ -53,7 +53,7 @@ return (
 
           <br />
 
-          <button type="submit" className={`auth_button ${loading ? 'loading' : ''}`}>
+          <button type="submit" className={`auth_button ${loading ? 'loading' : ''}`} disabled={loading}>
           {loading ? 'Please wait...' : 'Login'}
           {loading && <div className="spinner"></div>}
           </button>
