@@ -17,6 +17,7 @@ nav ul{
 nav ul li{
     cursor: pointer;
     color: black;
+    font-size: 1.2rem;
 }
 
 .burger {
@@ -27,12 +28,15 @@ nav ul li{
     nav{
         display: flex;
         justify-content: flex-end;  
+        min-height: 2.5rem;
     }
     .burger {
         display: block;
         position: absolute;
-        top: 0.3rem;
-        right: 1.6rem; 
+        top: 0.2rem;
+        right: 1.2rem; ;
+        font-size: 2rem;
+        font-weight: bold;
     }
   
     nav ul {
