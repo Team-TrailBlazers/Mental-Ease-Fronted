@@ -1,8 +1,10 @@
-nav{
-    background-color: #ffffff91;
-    height: fit-content;
-    width: 100%;
-    border-bottom: 1px solid #0000001a;
+nav {
+  position: relative;
+  background-color: #414141c0;
+  padding: 0.9rem 0.5rem;
+  height: fit-content;
+  width: 100%;
+  border-bottom: 1px solid #000000e1;
 }
 
 nav ul{
@@ -15,5 +17,43 @@ nav ul{
 nav ul li{
     cursor: pointer;
     color: black;
-    
 }
+
+.burger {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    nav{
+        display: flex;
+        justify-content: flex-end;  
+    }
+    .burger {
+        display: block;
+        position: absolute;
+        top: 0.3rem;
+        right: 1.6rem; 
+    }
+  
+    nav ul {
+      display: none;
+      padding: 0rem 2rem;
+    }
+
+    nav ul li{
+        padding: 0.5rem 0.2rem;
+      
+      }
+    .close{
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    .bars{
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+  
+    nav ul.open {
+      display: block;
+    }
+  }
