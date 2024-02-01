@@ -7,6 +7,7 @@ import Navbar from "./Components/NavBar/Navbar";
 import Register from "./Pages/Register/Register";
 import Login from "./Pages/Login/Login";
 import { Home } from './Pages/Home/Home';
+import { About } from './Pages/About/about';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/auth/login" element={<Login/>} />
           <Route path="/stripe" element={<StripePayment />} />
           <Route path="/success" element={<Success />} />
+          <Route path="/about" element={<About />} />
         </Routes>
         <ToastContainer />
       </Router>
