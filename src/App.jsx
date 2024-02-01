@@ -6,7 +6,7 @@ import Success from "./Pages/Success";
 import Navbar from "./Components/NavBar/Navbar";
 import Register from "./Pages/Register/Register";
 import Login from "./Pages/Login/Login";
-import { Home } from './Pages/Home/Home';
+import Home  from './Pages/Home/Home';
 
 function App() {
   return (

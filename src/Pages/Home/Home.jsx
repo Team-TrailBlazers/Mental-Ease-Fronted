@@ -6,7 +6,8 @@ import Footer from "../../Components/Footer/Footer";
 import { FaArrowRight } from "react-icons/fa";
 
 
-export const Home = () => {
+
+function Home() {
   const userData = useSelector((state) => state.user.user);
   return (
     <div className="homePage">
@@ -32,4 +33,6 @@ export const Home = () => {
     </div>
     </div>
   );
-};
+}
+
+export default Home
