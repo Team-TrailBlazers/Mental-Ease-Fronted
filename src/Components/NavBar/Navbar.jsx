@@ -14,21 +14,31 @@ function Navbar() {
         {isOpen ? <GrClose  className="close"/> : <FiAlignJustify className="bars"/>}
       </div>
       <ul className={isOpen ? 'open' : ''}>
+        
         <li>
-          <Link to="/home" onClick={() => setIsOpen(false)} style={{color: "white"}}>Home</Link>
+          <Link to="/" onClick={() => setIsOpen(false)} style={{color: "white"}}>Home</Link>
         </li>
+
         <li>
           <Link to="/stripe" onClick={() => setIsOpen(false)} style={{color: "white"}}>Stripe</Link>
         </li>
+
         <li>
           <Link to="/success" onClick={() => setIsOpen(false)} style={{color: "white"}}>Success</Link>
         </li>
+
+        <li>
+          <Link to="/therapists" onClick={() => setIsOpen(false)} style={{color: "white"}}>Therapists</Link>
+        </li>
+
         <li>
           <Link to="/auth/register" onClick={() => setIsOpen(false)} style={{color: "white"}} >Register</Link>
         </li>
+
         <li>
           <Link to="/auth/login" onClick={() => setIsOpen(false)} style={{color: "white"}} >Login</Link>
         </li>
+
       </ul>
     </nav>
   );

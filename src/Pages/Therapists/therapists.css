@@ -1,0 +1,67 @@
+.welcome-therapist{
+	display: flex;
+	justify-content: space-around;
+	background-color: cornflowerblue;
+	padding:  20px 0px;
+	height: fit-content;
+	color: white;
+}
+
+.image-therapists{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 35%;
+}
+
+.image-therapists img{
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+.text-description{
+	width: 65%;
+	padding:  20px 0px;
+}
+
+.text-description h2{
+	margin-bottom: 20px;
+}
+
+/* media query at 660px */ 
+@media screen and (max-width: 660px){
+	.welcome-therapist{
+		flex-direction: column;
+	}
+
+	.image-therapists{
+	display: none;
+}
+	.text-description{
+		width: 100%;
+		padding: 0 20px;
+	}
+
+	.text-description h2{
+		margin-bottom: 10px;
+		font-size: 20px;
+		text-align: center;
+	}
+
+	.text-description p{
+		font-size: 15px;
+		text-align: center;
+	}
+}
+
+@media screen and (max-width: 490px){
+	.text-description h2{
+		font-size: 18px;
+	}
+
+	.text-description p{
+		font-size: 13px;
+	}
+
+}
