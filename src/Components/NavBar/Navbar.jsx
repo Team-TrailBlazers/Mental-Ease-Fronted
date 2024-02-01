@@ -26,6 +26,9 @@ function Navbar() {
         <li>
           <Link to="/auth/register" onClick={() => setIsOpen(false)} style={{color: "white"}} >Register</Link>
         </li>
+        <li>
+          <Link to="/auth/login" onClick={() => setIsOpen(false)} style={{color: "white"}} >Login</Link>
+        </li>
       </ul>
     </nav>
   );

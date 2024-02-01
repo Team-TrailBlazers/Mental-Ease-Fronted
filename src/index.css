@@ -1,5 +1,4 @@
 
-
 /* root */
 :root{
   --main-color : ##F9F9F9;
@@ -11,6 +10,7 @@
   --homePage-bg-color: #adbc9f9c;
   --color-white: #fff;  
   --border-color: #333;
+  --navbar-bg-color: #414141c0;
 }
 
 
