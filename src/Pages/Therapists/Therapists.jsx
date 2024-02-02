@@ -1,11 +1,13 @@
 import React from 'react'
 import "./therapists.css"
 import MentalEasePhoto from "../../assets/images/MentalEasePhoto.png"
+import TherapistCard from './TherapistCard'
 
 
 function Therapists() {
   return (
 	<div>
+
 		<div className="welcome-therapist">
 
 			<div className="image-therapists">
@@ -22,9 +24,14 @@ function Therapists() {
 				</p>
 
 			</div>
-
-			{/* therapists cards */}
 		</div>
+
+
+		{/* therapists cards */}
+
+		<TherapistCard />
+
+
 	</div>
   )
 }
