@@ -3,6 +3,7 @@ import './card.css';
 import Axios from 'axios';
 import { apidomain } from './../../Utils/apiDomain';
 import userIcon from './../../assets/images/userIcon.jpg'
+import Footer from './../../Components/Footer/Footer';
 
 
 function TherapistCard() {
@@ -24,8 +25,13 @@ function TherapistCard() {
 
   return (
     <div>
-      <input type="text" placeholder="Search by name" onChange={e => setSearchName(e.target.value)} />
-      <input type="text" placeholder="Search by specialization" onChange={e => setSearchSpecialization(e.target.value)} />
+      <h3 className='search-experience'>Enjoy the search experience 😀</h3>
+      <div className="search-div">
+
+      <input type="text" placeholder="Search by name" onChange={e => setSearchName(e.target.value)} className='seacrh-name'/>
+      <input type="text" placeholder="Search by specialization" onChange={e => setSearchSpecialization(e.target.value)} className='seacrh-specialization'/>
+      </div>
+     
       <div className="cardsContainer">
 	  {filteredTherapists.map(therapist => (
 
@@ -48,6 +54,8 @@ function TherapistCard() {
 
       ))}
 	  </div>
+
+    <Footer/>
     </div>
   );
 }

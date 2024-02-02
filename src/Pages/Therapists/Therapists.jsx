@@ -3,7 +3,6 @@ import "./therapists.css"
 import MentalEasePhoto from "../../assets/images/MentalEasePhoto.png"
 import TherapistCard from './TherapistCard'
 
-
 function Therapists() {
   return (
 	<div>
@@ -28,9 +27,14 @@ function Therapists() {
 
 
 		{/* therapists cards */}
+	<>
+	<TherapistCard />
+	</>
+		
 
-		<TherapistCard />
-
+	
+		
+		
 
 	</div>
   )
