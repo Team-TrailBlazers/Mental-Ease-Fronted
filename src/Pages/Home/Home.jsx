@@ -25,7 +25,7 @@ function Home() {
     </div>
     <div className="homeLogo">
       {/* background image */}
-      <h2>We care about your Mental State</h2> 
+      <h1>We care about your Mental State</h1> 
       <button className="learn-more">Learn More <span><FaArrowRight /></span> </button>
     </div>
     <div >
