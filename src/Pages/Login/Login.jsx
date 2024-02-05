@@ -30,7 +30,7 @@ function Login() {
   const onSubmit = async (data) => {
    
     setLoading(true);
-    await loginUser(dispatch, data,  () => navigate("/home"));
+    await loginUser(dispatch, data,  () => navigate("/"));
     setLoading(false);
   };
 
