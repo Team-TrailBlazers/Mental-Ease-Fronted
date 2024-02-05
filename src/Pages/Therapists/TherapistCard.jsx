@@ -4,6 +4,7 @@ import Axios from 'axios';
 import { apidomain } from './../../Utils/apiDomain';
 import userIcon from './../../assets/images/userIcon.jpg'
 import Footer from './../../Components/Footer/Footer';
+import { FiMessageSquare } from "react-icons/fi";
 
 
 function TherapistCard() {
@@ -48,6 +49,12 @@ function TherapistCard() {
 		<p>Specialization: {therapist.Specialization}</p>
           <p>Location: {therapist.Location}</p>
           <p>Treatment Approach: {therapist.TreatmentApproach}</p>
+
+          <div className="book-now-btn">
+         <h1> <FiMessageSquare /> </h1> 
+
+          <button>Book Now</button>
+          </div>
 		</div>
        
         </div>

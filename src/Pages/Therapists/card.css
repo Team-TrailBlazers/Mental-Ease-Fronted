@@ -70,13 +70,42 @@
 	margin: 0.8rem 0.5rem;
 }
 
-/* media query at 600px */
+.book-now-btn{
+	padding: 1rem 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 
+.book-now-btn button{
+	padding: 0.6rem 0.6rem;
+	border: none;
+	border-radius: 5px;
+	background-color: var(--button-color);
+	color: var(--color-white);
+	font-size: 1rem;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	display: block;
+	margin: 0 auto;
+}
+
+.book-now-btn h1{
+	position: relative;
+	display: block;
+	margin: 0 auto;
+	color: var(--button-color);
+	cursor: pointer;
+}
+
+
+/* media query at 600px */
 @media screen and (max-width: 600px){
 	.card{
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+		margin: 1rem 0.8rem;
 	}
 	.basic-info{
 		border-right: none;
@@ -109,7 +138,6 @@
 		font-size: 1rem;
 		color: var(--text-color);
 		padding-top: 0.5rem 0;
-	
 	}
 
 }
