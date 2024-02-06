@@ -17,6 +17,10 @@
     display: flex;
     flex-direction: column;
     text-align: center;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
   }
   
   .joinChatContainer h3 {
@@ -24,17 +28,18 @@
     margin-bottom: 1rem;
   }
   .joinChatContainer input {
-    width: 210px;
+    width: 230px;
     height: 40px;
     margin: 7px;
     border: 2px solid #43a047;
     border-radius: 5px;
     padding: 5px;
     font-size: 16px;
+    margin-left: 70px;
   }
   
   .joinChatContainer button {
-    width: 225px;
+    width: 230px;
     height: 50px;
     margin: 7px;
     border: none;
@@ -44,6 +49,7 @@
     background: #43a047;
     color: #fff;
     cursor: pointer;
+    margin-left: 70px;
   }
   
   .joinChatContainer button:hover {
@@ -51,8 +57,9 @@
   }
   
   .chat-window {
-    width: 300px;
-    height: 420px;
+    width: 500px;
+    height: 550px;
+    position: relative;
   }
   
   .chat-window p {
@@ -60,10 +67,15 @@
   }
   .chat-window .chat-header {
     height: 45px;
-    border-radius: 6px;
+    border-radius: 5px;
     background: #263238;
     position: relative;
     cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
   }
   .chat-window .chat-header p {
     display: block;
@@ -74,11 +86,13 @@
   }
   
   .chat-window .chat-body {
-    height: calc(450px - (45px + 70px));
+    height: calc(600px - (45px + 80px));
+    /* height: calc(400px - (45px + 70px)); */
     border: 1px solid #263238;
     background: #fff;
-  
+    border-radius: 4px;
     position: relative;
+    z-index: 1;
   }
   .chat-window .chat-body .message-container {
     width: 100%;
@@ -92,6 +106,7 @@
   }
   .chat-window .chat-body .message {
     height: auto;
+    margin-top: 35px;
     padding: 10px;
     display: flex;
   }
@@ -115,29 +130,29 @@
   }
   
   #you {
-    justify-content: flex-start;
+    justify-content: flex-end;
   }
   
   #you .message-content {
-    justify-content: flex-start;
+    justify-content: flex-end;
   }
   
   #you .message-meta {
-    justify-content: flex-start;
+    justify-content: flex-end;
     margin-left: 5px;
   }
   
   #other {
-    justify-content: flex-end;
+    justify-content: flex-start;
   }
   
   #other .message-content {
-    justify-content: flex-end;
+    justify-content: flex-start;
     background-color: cornflowerblue;
   }
   
   #other .message-meta {
-    justify-content: flex-end;
+    justify-content: flex-start;
     margin-right: 5px;
   }
   
