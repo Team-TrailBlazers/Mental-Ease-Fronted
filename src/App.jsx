@@ -8,6 +8,8 @@ import Register from "./Pages/Register/Register";
 import Login from "./Pages/Login/Login";
 import Home  from './Pages/Home/Home';
 import Therapists from "./Pages/Therapists/Therapists";
+import Message from "./Components/Messaging/Message";
+import Resources from "./Pages/ResourceGallery/Resource";
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
           <Route path="/stripe" element={<StripePayment />} />
           <Route path="/success" element={<Success />} />
           <Route path="/therapists" element={<Therapists />} />
+          <Route path="/chat" element={<Message />} />
+          <Route path="/resources" element={<Resources />} />
 
         </Routes>
         <ToastContainer />
