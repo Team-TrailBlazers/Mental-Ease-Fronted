@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import "./navbar.css"
 import { Link } from "react-router-dom";
 function Navbar() {
@@ -21,6 +21,11 @@ function Navbar() {
         <li>
           <Link to="/auth/login">Login</Link>
         </li>
+
+        <li>
+          <Link to="/profile">Profile</Link>
+        </li>
+
       </ul>
     </nav>
   );

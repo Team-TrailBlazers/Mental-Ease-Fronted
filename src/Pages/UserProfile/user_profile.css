@@ -1,0 +1,69 @@
+.user_profile_page{
+    background-color: var(--form-bg-color);
+    width: 65%;
+    height: 90vh;
+    display: flex;
+    margin-top: 70px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    margin: auto;
+    border: 1px solid rgb(100, 102, 95);
+}
+.profile_img{
+    align-items: center;
+    width: 35%;
+    background-color: rgb(97, 125, 125);
+    /* margin: 50px; */
+}
+.profile_img p{
+    text-align: center;
+    color: rgb(9, 7, 15);
+}
+.profile_img img{
+    width:150px;
+    height: 150px;
+    border-radius: 50%;
+    margin:50px;
+}
+.update_btn{
+    padding: 10px 20px;
+    background-color: var(--button-color);
+    color: var(--white-color);
+    border: none;
+    cursor: pointer;
+    margin-left:70px;
+    margin-top: 12px;
+    /* width: 30%; */
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 10px;
+}
+
+.profile_info{
+    width: 68%;
+    margin: 50px;
+    line-height: 60px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+}
+.logout_btn{
+    padding: 10px 20px;
+    background-color: var(--button-color);
+    color: var(--white-color);
+    border: none;
+    cursor: pointer;
+    width:150px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 10px;
+    margin-left: 40px;
+    
+}
+#fileInput{
+    margin-left: 30%;
+}
+.delbtn{
+    background-color: brown;
+}
