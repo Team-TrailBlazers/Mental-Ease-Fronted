@@ -1,4 +1,4 @@
-// import React from 'react'
+import React, {useState} from 'react'
 import './register-login.css'
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
@@ -12,8 +12,8 @@ import { toastStyles } from '../../../toastConfig';
 
 
 const schema = yup.object().shape({
-    FirstName: yup.string().required("First Name is required"),
-    LastName: yup.string().required("Last Name is required"),
+    FirstName: yup.string().min(3, "FirstName must be at least 3 characters").required("First Name is required"),
+    LastName: yup.string().min(3, "LastName must be at least 3 characters").required("Last Name is required"),
     EmailAddress: yup.string().email("email is invalid").required("Email is required"),
     Password: yup.string().min(4, "password must be at least 4 characters").required("Password is required"),
     ConfirmPassword: yup  
@@ -24,6 +24,7 @@ const schema = yup.object().shape({
 
 function Register() {
     const navigate = useNavigate();
+    const [loading, setLoading] = useState(false);
 
     const {
         register,
@@ -34,14 +35,18 @@ function Register() {
 
 
     const onSubmit = (data) => {
+        
+        setLoading(true);
         Axios.post(`${apidomain}/api/auth/register`, data)
         .then((response) => {
+            setLoading(false);
             console.log(response.data.message);
             toast.success(response.data.message, toastStyles.success);
             navigate("/auth/login");
             reset();
         })
         .catch((error) => {
+            setLoading(false);
             // console.log(error.response.data.message);
             toast.error(error.response.data.message, toastStyles.error);
         });
@@ -85,7 +90,10 @@ function Register() {
 
             <br />
 
-            <button type="submit" className='register_button'>Register</button>
+            <button type="submit" className={`auth_button ${loading ? 'loading' : ''}`} disabled={loading}>
+                {loading ? 'Please wait...' : 'Register'}
+                {loading && <div className="spinner"></div>}
+                </button>
 
         </form>
         

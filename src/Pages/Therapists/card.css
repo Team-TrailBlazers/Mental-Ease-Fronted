@@ -1,0 +1,143 @@
+.cardsContainer {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly; 
+	border:  1px solid #33333383;
+	border-radius: 10px;
+  }
+
+.card{
+	display: flex;
+	padding: 2rem 1rem;
+	justify-content: space-evenly;
+	background-color: var(--homePage-bg-color);
+	margin: 2rem 1rem;
+	border-radius: 5px;
+	border: 1px solid var(--border-color);
+	transition: all 0.3s ease;
+	width: 600px;
+}
+
+.search-experience{
+	text-align: center;
+	font-size: 1.2rem;
+	color: var(--text-color);
+	padding: 1rem 0;
+}
+
+.search-div{
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	margin: 1rem 0;
+}
+
+.search-div input{
+	width: 200px;
+	height: 30px;
+	border-radius: 5px;
+	border: 1px solid var(--border-color);
+	padding: 10px;
+	font-size: 15px;
+}
+
+.basic-info{
+	border-right: var(--border-color) 1px solid;
+	width: 30%;
+}
+
+.therapist-name{
+	padding: 0.5rem 0;
+	font-size: 1.2rem;
+	font-weight: 600;
+	color: var(--text-color);
+}
+
+.therapist-details{
+	font-size: 1rem;
+	color: var(--text-color);
+}
+
+.more-info{
+	width: 70%;
+	text-align: justify;
+	padding: 1rem 0;
+}
+
+.more-info p{
+	font-size: 1rem;
+	color: var(--text-color);
+	margin: 0.8rem 0.5rem;
+}
+
+.book-now-btn{
+	padding: 1rem 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.book-now-btn button{
+	padding: 0.6rem 0.6rem;
+	border: none;
+	border-radius: 5px;
+	background-color: var(--button-color);
+	color: var(--color-white);
+	font-size: 1rem;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	display: block;
+	margin: 0 auto;
+}
+
+.book-now-btn h1{
+	position: relative;
+	display: block;
+	margin: 0 auto;
+	color: var(--button-color);
+	cursor: pointer;
+}
+
+
+/* media query at 600px */
+@media screen and (max-width: 600px){
+	.card{
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		margin: 1rem 0.8rem;
+	}
+	.basic-info{
+		border-right: none;
+		width: unset;
+		text-align: center;
+	}
+
+	.more-info{
+		width: unset;
+		text-align: justify;
+		padding: 1rem 0;
+	}
+	
+}
+
+@media screen and (max-width: 485px){
+	.search-div{
+		flex-direction: column;
+	}
+
+	.search-div input{
+		width: 80%;
+		height: 30px;
+		margin: 10px;
+		font-size: 13px;
+	}
+
+	.search-experience{
+		text-align: center;
+		font-size: 1rem;
+		color: var(--text-color);
+		padding-top: 0.5rem 0;
+	}
+
+}

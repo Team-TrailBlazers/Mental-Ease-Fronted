@@ -1,5 +1,4 @@
 
-
 /* root */
 :root{
   --main-color : ##F9F9F9;
@@ -8,14 +7,17 @@
   --hover-btn-color: #007bff;
   --form-bg-color: #F7F7F7;
   --text-color: #333;
+  --homePage-bg-color: #adbc9f9c;
+  --color-white: #fff;  
+  --border-color: #333;
+  --navbar-bg-color: #414141c0;
 }
 
 
 /* body */
 body{
   background-color: var(--main-color);
-  font-family: 'Roboto', sans-serif;
-  
+  font-family: 'Roboto', sans-serif; 
 }
 
 

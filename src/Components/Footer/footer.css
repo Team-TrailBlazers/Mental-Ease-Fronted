@@ -1,0 +1,7 @@
+.footer{
+	margin-top: 2rem;
+	text-align: center;
+ 	padding: 10px 0;
+	background-color: var(--navbar-bg-color);
+	width: 100vw;
+}

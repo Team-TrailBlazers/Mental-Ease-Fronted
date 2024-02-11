@@ -1,4 +1,4 @@
-// import React from 'react'
+import React, {useState} from 'react'
 import './login.css'
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
@@ -17,6 +17,7 @@ const schema = yup.object().shape({
 function Login() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  const [loading, setLoading] = useState(false);
 
   const {
       register,
@@ -27,7 +28,10 @@ function Login() {
 
 
   const onSubmit = async (data) => {
-          await loginUser(dispatch, data,  () => navigate("/home"));
+   
+    setLoading(true);
+    await loginUser(dispatch, data,  () => navigate("/"));
+    setLoading(false);
   };
 
 return (
@@ -50,7 +54,10 @@ return (
 
           <br />
 
-          <button type="submit" className='register_button'>Login</button>
+          <button type="submit" className={`auth_button ${loading ? 'loading' : ''}`} disabled={loading}>
+          {loading ? 'Please wait...' : 'Login'}
+          {loading && <div className="spinner"></div>}
+          </button>
 
       </form>
       
