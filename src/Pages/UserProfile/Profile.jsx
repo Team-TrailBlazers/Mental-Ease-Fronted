@@ -18,7 +18,7 @@ const Profile = () => {
 
   const account = "mentaleaseblobstore";
   const sasToken =
-    "sp=racwl&st=2024-02-08T21:11:34Z&se=2024-10-02T18:11:34Z&sv=2022-11-02&sr=c&sig=jn0M86%2B8w%2FdF1Z4UAozPpg0X4ZJy41sQPSyw9qgY2sA%3D";
+    "sp=racwdl&st=2024-02-11T14:13:06Z&se=2024-11-03T11:13:06Z&sv=2022-11-02&sr=c&sig=%2F3EAHB3LOC4ORS%2Bq%2FUV%2FtpUDVIhcvsGAm01mQr4nKiw%3D";
   const containerName = "profileupload";
 
   const [file, setFile] = useState(null);
@@ -110,7 +110,6 @@ const Profile = () => {
 
   return (
     <div className="user_profile_page">
-      {/* <h2>Your Profile</h2> */}
       <div className="profile_img">
         <div className="file_upload">
           {file ? (
