@@ -11,7 +11,7 @@
 }
 .profile_img{
     align-items: center;
-    width: 35%;
+    /* width: 35%; */
     background-color: rgb(97, 125, 125);
     /* margin: 50px; */
 }
@@ -23,7 +23,7 @@
     width:150px;
     height: 150px;
     border-radius: 50%;
-    margin:50px;
+    margin:38px;
 }
 .update_btn{
     padding: 10px 20px;
@@ -31,7 +31,7 @@
     color: var(--white-color);
     border: none;
     cursor: pointer;
-    margin-left:70px;
+    margin-left:40px;
     margin-top: 12px;
     /* width: 30%; */
     font-size: 14px;
@@ -40,7 +40,7 @@
 }
 
 .profile_info{
-    width: 68%;
+    width: 65%;
     margin: 50px;
     line-height: 60px;
     align-items: center;
@@ -62,40 +62,41 @@
     
 }
 #fileInput{
-    margin-left: 30%;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    border: 0.1px solid rgb(20, 41, 20);
+    border-radius: 5px;
+    background-color: rgb(97, 125, 125);
+    font-size: 13px;
+    width:80%;
 }
 .delbtn{
     background-color: brown;
 }
 @media screen and (max-width: 600px) {
     .user_profile_page{
-        width: 100%;
-        height:95vh;
+        width: 70%;
+        height:50%;
         display: flex;
         flex-wrap: wrap;
-        /* font-size: 10px; */
+        font-size: 18px;
+        
     }
     .profile_img{
         width: 100%;
         height: 59%;
         display:grid;
-        grid-template-columns: 1fr;
         
     }
     .profile_img img{
         width: 100px;
         height: 100px;
-        margin-left: 250px;
     }
     .update_btn{
-        margin-left: 238px;
-        margin-top: 10px; 
         margin-bottom: 10px;
-        width: 28%;
-        padding: 10px 20px;
     }
     #fileInput{
-        margin-left: 240px;
+        /* margin-left: 40px; */
         margin-bottom: 10px;
     }
     .profile_info{
@@ -107,7 +108,28 @@
 
 }
 
-@media screen and (max-width: 720px) {
-    
+@media screen and (max-width: 920px) {
+    .user_profile_page{
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 13px;
+        height: 95vh;
+    }
+    .profile_info{
+        width: 100%;
+        height: 40%;
+        margin: 0;
+        line-height: 30px;
+    }
+    .profile_img{
+        width: 100%;
+        height: 60%;
+        display: grid;
+        justify-items: center;
+        margin-bottom: 20px;
+    }
+    .update_btn, .logout_btn{
+        margin-bottom: 10px;
+    }
    
 }

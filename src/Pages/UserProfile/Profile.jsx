@@ -149,8 +149,8 @@ const Profile = () => {
 
       <div className="profile_info">
         <p>Email: {userData?.email}</p>
-        <p>First Name: brian</p>
-        <p>Last Name: kemboi</p>
+        <p>First Name: Adamsoins </p>
+        <p>Last Name: Gideon</p>
         <p>user-id: {userData?.user_id}</p>
         
         <button onClick={handleLogOut} className="logout_btn">
