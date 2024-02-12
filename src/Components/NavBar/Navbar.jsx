@@ -5,9 +5,11 @@ import { Link } from "react-router-dom";
 import { FiAlignJustify } from "react-icons/fi";
 import { GrClose } from "react-icons/gr";
 import "./navbar.css";
+import { useSelector } from "react-redux";
 
 
 function Navbar() {
+  const userData = useSelector((state) => state.user.user);
   const [isOpen, setIsOpen] = useState(false);
 
   return ( 
@@ -16,12 +18,17 @@ function Navbar() {
         {isOpen ? <GrClose  className="close"/> : <FiAlignJustify className="bars"/>}
       </div>
       <ul className={isOpen ? 'open' : ''}>
+
+     
         
         <li>
           <Link to="/" onClick={() => setIsOpen(false)} style={{color: "white"}}>Home</Link>
         </li>
 
-        <li>
+        {
+          userData && (
+            <>
+             <li>
           <Link to="/stripe" onClick={() => setIsOpen(false)} style={{color: "white"}}>Stripe</Link>
         </li>
 
@@ -33,18 +40,33 @@ function Navbar() {
           <Link to="/therapists" onClick={() => setIsOpen(false)} style={{color: "white"}}>Therapists</Link>
         </li>
 
-        <li>
-          <Link to="/auth/register" onClick={() => setIsOpen(false)} style={{color: "white"}} >Register</Link>
-        </li>
+            </>
+          )
+        }
 
-        <li>
-          <Link to="/auth/login" onClick={() => setIsOpen(false)} style={{color: "white"}} >Login</Link>
-        </li>
+       
+        {
+          userData ? (
+            <li>
+            <Link to="/profile" onClick={() => setIsOpen(false)} style={{color: "white"}}>Profile</Link>
+          </li>
+
+          ) : (
+            <>
+            <li>
+            <Link to="/auth/register" onClick={() => setIsOpen(false)} style={{color: "white"}} >Register</Link>
+          </li>
+  
+          <li>
+            <Link to="/auth/login"  style={{color: "white"}} >Login</Link>
+          </li>
+          </>
+          )
+        }
+       
 
 
-        <li>
-          <Link to="/profile">Profile</Link>
-        </li>
+       
 
       </ul>
     </nav>
