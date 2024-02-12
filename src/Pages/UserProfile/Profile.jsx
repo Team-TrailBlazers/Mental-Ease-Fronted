@@ -6,15 +6,10 @@ import { BlobServiceClient } from "@azure/storage-blob";
 import "./user_profile.css";
 import placeholder from "../../assets/images/avatar.jfif";
 
-// trobuleshooting errors
-// import { setLogLevel } from "@azure/logger";
-// setLogLevel("info");
-// console.log(setLogLevel)
 
 const Profile = () => {
   const navigate = useNavigate();
   const userData = useSelector((state) => state.user.user);
-
 
   const account = "mentaleaseblobstore";
   const sasToken =
@@ -108,10 +103,12 @@ const Profile = () => {
     fetchImages();
   }, []);
 
+
   return (
     <div className="user_profile_page">
       <div className="profile_img">
         <div className="file_upload">
+
           {file ? (
             <img className="" src={URL.createObjectURL(file)} alt="no pic" />
           ) : userImageUrl ? (
@@ -129,7 +126,7 @@ const Profile = () => {
           />
         </div>
 
-        <button type="submit" onClick={handleSubmit} className="update_btn">
+        <button type="submit" onClick={handleSubmit} className="Upload_btn">
           Upload pic
         </button>
 
@@ -147,11 +144,14 @@ const Profile = () => {
       </div>
 
       <div className="profile_info">
+        <div className="p-elements">
         <p>Email: {userData?.email}</p>
         <p>First Name: Adamsoins </p>
         <p>Last Name: Gideon</p>
         <p>user-id: {userData?.user_id}</p>
-        
+
+        </div>
+       
         <button onClick={handleLogOut} className="logout_btn">
           Logout
         </button>
