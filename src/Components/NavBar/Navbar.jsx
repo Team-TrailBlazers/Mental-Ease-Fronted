@@ -1,3 +1,5 @@
+// import React from "react";
+import "./navbar.css";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FiAlignJustify } from "react-icons/fi";
@@ -37,6 +39,11 @@ function Navbar() {
 
         <li>
           <Link to="/auth/login" onClick={() => setIsOpen(false)} style={{color: "white"}} >Login</Link>
+        </li>
+
+
+        <li>
+          <Link to="/profile">Profile</Link>
         </li>
 
       </ul>
