@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { BlobServiceClient } from "@azure/storage-blob";
 import "./user_profile.css";
 import placeholder from "../../assets/images/avatar.jfif";
+import { TiDelete } from "react-icons/ti";
 
 // trobuleshooting errors
 // import { setLogLevel } from "@azure/logger";
@@ -18,7 +19,7 @@ const Profile = () => {
 
   const account = "mentaleaseblobstore";
   const sasToken =
-    "sp=racwdl&st=2024-02-11T14:13:06Z&se=2024-11-03T11:13:06Z&sv=2022-11-02&sr=c&sig=%2F3EAHB3LOC4ORS%2Bq%2FUV%2FtpUDVIhcvsGAm01mQr4nKiw%3D";
+    "st=2024-02-12T13:30:08Z&se=2024-03-03T21:30:08Z&si=*&sv=2022-11-02&sr=c&sig=SPbZJ9qmTOutEa9FzfWZQdhlvUuXJOeTwqQACO4wzFc%3D";
   const containerName = "profileupload";
 
   const [file, setFile] = useState(null);
@@ -36,7 +37,7 @@ const Profile = () => {
   const fetchImages = async () => {
     try {
       setLoading(true);
-      const blobServiceClient = new BlobServiceClient(`https://${account}.blob.core.windows.net`);
+      const blobServiceClient = new BlobServiceClient(`https://${account}.blob.core.windows.net/?${sasToken}`);
       // const blobServiceClient = new BlobServiceClient("https://mentaleaseblobstore.blob.core.windows.net/profileupload");
       const containerClient = blobServiceClient.getContainerClient(containerName);
       const blobItems = containerClient.listBlobsFlat();
@@ -45,7 +46,8 @@ const Profile = () => {
       for await (const blob of blobItems) {
         const imageUrl = `${blobServiceClient.url}${containerName}/${blob.name}`;
         urls.push({ name: blob.name, url: imageUrl });
-        console.log(imageUrl)
+        console.log(imageUrl);
+        // alert("almost done🧡🧡🧡💙💙💙")
       }
       setImageUrls(urls);
       setLoading(false);
@@ -57,7 +59,7 @@ const Profile = () => {
         setUserImageUrl(null);
       }
     } catch (error) {
-      console.error(error);
+      console.error("Error fetching images❗❗📵🔞🚱:", error);
       alert("Error fetching images");
       setLoading(false);
     }
@@ -81,6 +83,7 @@ const Profile = () => {
         });
 
         alert("File uploaded successfully");
+      
         fetchImages();
         setLoading(false);
       } catch (error) {
@@ -141,16 +144,16 @@ const Profile = () => {
             }}
             className="delbtn"
           >
-           delete pic
+          <TiDelete />
           </button>
         )}
       </div>
 
       <div className="profile_info">
-        <p>Email: {userData?.email}</p>
+        <p>Email: user@gmail.com{userData?.email}</p>
         <p>First Name: Adamsoins </p>
-        <p>Last Name: Gideon</p>
-        <p>user-id: {userData?.user_id}</p>
+        <p>Last Name: brians</p>
+        <p>user-id: 232242524{userData?.user_id}</p>
         
         <button onClick={handleLogOut} className="logout_btn">
           Logout

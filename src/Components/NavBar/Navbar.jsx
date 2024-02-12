@@ -43,7 +43,7 @@ function Navbar() {
 
 
         <li>
-          <Link to="/profile">Profile</Link>
+        <Link to="/profile" onClick={() => setIsOpen(false)} style={{color: "white"}} >Profile</Link>
         </li>
 
       </ul>

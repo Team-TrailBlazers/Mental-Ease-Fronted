@@ -71,7 +71,11 @@
     width:80%;
 }
 .delbtn{
-    background-color: brown;
+    background-color: rgb(63, 96, 97);
+    margin-left:40px;
+    margin-top: 12px;
+    font-size: 20px;
+    /* margin-bottom: 10px;  */
 }
 @media screen and (max-width: 600px) {
     .user_profile_page{
@@ -113,7 +117,7 @@
         display: flex;
         flex-wrap: wrap;
         font-size: 13px;
-        height: 95vh;
+        height: 100%;
     }
     .profile_info{
         width: 100%;
