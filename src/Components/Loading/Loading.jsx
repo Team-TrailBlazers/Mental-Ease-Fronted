@@ -1,5 +1,5 @@
 import { ThreeDots } from 'react-loading-icons'
-import './Loading.css'
+import './loading.css'
 export default function Loading() {
     return (
         <div className='Loading-container'>
