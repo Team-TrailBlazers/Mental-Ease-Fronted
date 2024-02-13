@@ -119,7 +119,7 @@ function Register() {
 
         <button
           type="submit"
-          className={`auth_button ${loading ? "loading" : ""}`}
+          className={`auth_button ${loading ? "loading-wait" : ""}`}
           disabled={loading}
         >
           {loading ? "Please wait..." : "Register"}

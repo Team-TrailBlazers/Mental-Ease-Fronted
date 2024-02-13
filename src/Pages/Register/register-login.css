@@ -54,7 +54,7 @@ form input {
   width: 40%;
 }
 
-.auth_button.loading {
+.auth_button.loading-wait {
   cursor: not-allowed;
 }
 
