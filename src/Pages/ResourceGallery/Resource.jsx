@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import './Resource.css'
+import './resource.css'
 import { AiFillDelete } from 'react-icons/ai';
 import { FaFileUpload } from 'react-icons/fa';
 import Placeholder from '../../assets/images/placeholder.jpeg'
