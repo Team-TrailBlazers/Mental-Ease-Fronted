@@ -1,86 +1,95 @@
 .user_profile_page{
     background-color: var(--form-bg-color);
-    width: 65%;
-    height: 90vh;
+    width: 80%;
+    min-height: 90vh;
     display: flex;
-    margin-top: 70px;
-    margin-bottom: 20px;
-    border-radius: 10px;
+    border-radius: 7px;
     margin: auto;
-    border: 1px solid rgb(100, 102, 95);
+    border: 1px solid rgb(100, 102, 95); 
 }
+
 .profile_img{
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    /* width: 35%; */
+    width: 35%;
     background-color: rgb(97, 125, 125);
-    /* margin: 50px; */
 }
-.profile_img p{
-    text-align: center;
-    color: rgb(9, 7, 15);
-}
+
 .profile_img img{
     width:150px;
     height: 150px;
     border-radius: 50%;
     margin:38px;
+    object-fit: cover;
 }
-.update_btn{
+
+.Upload_btn{
     padding: 10px 20px;
     background-color: var(--button-color);
     color: var(--white-color);
     border: none;
     cursor: pointer;
-    margin-left:40px;
-    margin-top: 12px;
-    /* width: 30%; */
-    font-size: 14px;
-    font-weight: 600;
-    border-radius: 10px;
+    margin-top: 35px;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 10px; 
+}
+
+.Upload_btn:hover{
+    background-color: var(--hover-btn-color);
 }
 
 .profile_info{
-    width: 65%;
-    margin: 50px;
-    line-height: 60px;
-    align-items: center;
+    display: flex;
     justify-content: center;
-    text-align: center;
-
+    flex-direction: column;
+    width: 65%;
+    line-height: 40px;
+    align-items: center;
 }
+
+.p-elements p{
+    font-size: 20px;
+}
+
 .logout_btn{
-    padding: 10px 20px;
+    padding: 10px 15px;
     background-color: var(--button-color);
     color: var(--white-color);
     border: none;
     cursor: pointer;
     width:150px;
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 600;
     border-radius: 10px;
-    margin-left: 40px;
-    
+    margin-top: 15px; 
+}
+
+.logout_btn:hover{
+    background-color: var(--hover-btn-color);
 }
 #fileInput{
-    margin-left: 20px;
-    margin-bottom: 20px;
     border: 0.1px solid rgb(20, 41, 20);
     border-radius: 5px;
-    background-color: rgb(97, 125, 125);
     font-size: 12px;
-    width:80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
 .delbtn{
-    background-color: rgb(63, 96, 97);
-    margin-left:40px;
+    background-color: rgb(97, 125, 125);
     margin-top: 12px;
-    font-size: 20px;
-    /* margin-bottom: 10px;  */
+    font-size: 39px;
+    /* padding: 3px 8px; */
+    color: rgb(130, 19, 19);
+    margin-bottom: 10px; 
+    border: none;
+    cursor: pointer;
 }
 @media screen and (max-width: 600px) {
     .user_profile_page{
-        width: 70%;
-        height:50%;
         display: flex;
         flex-wrap: wrap;
         font-size: 18px;
@@ -88,20 +97,35 @@
     }
     .profile_img{
         width: 100%;
-        height: 59%;
-        display:grid;
-        
+        height: 60%;
+        display: grid;
+        justify-items: center;
+        margin-bottom: 20px;
     }
+    .Upload_btn, .logout_btn{
+        margin-bottom: 10px;
+    }
+   
+}
+
+@media screen and (max-width: 600px) {
+    .user_profile_page{
+        width: 90%;
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 18px;  
+    }
+   
     .profile_img img{
         width: 100px;
         height: 100px;
     }
-    .update_btn{
+    
+    .Upload_btn{
         margin-bottom: 10px;
     }
     #fileInput{
-        /* margin-left: 40px; */
-        margin-bottom: 10px;
+        width: 150px;
     }
     .profile_info{
         width: 100%;
@@ -110,6 +134,13 @@
         line-height: 30px;
     }
 
+    .logout_btn{
+        padding: 10px 10px;
+        width:130px;
+        font-size: 18px;
+        font-weight: 500;
+        border-radius: 8px;
+        margin-top: 20px; 
 }
 
 @media screen and (max-width: 920px) {
@@ -125,15 +156,20 @@
         margin: 0;
         line-height: 30px;
     }
-    .profile_img{
-        width: 100%;
-        height: 60%;
-        display: grid;
-        justify-items: center;
-        margin-bottom: 20px;
+
+    .Upload_btn{
+        padding: 10px 10px;
+        margin-top: 28px;
+        font-size: 18px;
+        font-weight: 500;
+        border-radius: 8px; 
     }
-    .update_btn, .logout_btn{
-        margin-bottom: 10px;
+    
+    .p-elements p{
+        font-size: 17px;
     }
-   
+
+ 
+
+}
 }

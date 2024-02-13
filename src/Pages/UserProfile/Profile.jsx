@@ -5,17 +5,15 @@ import { useNavigate } from "react-router-dom";
 import { BlobServiceClient } from "@azure/storage-blob";
 import "./user_profile.css";
 import placeholder from "../../assets/images/avatar.jfif";
-import { TiDelete } from "react-icons/ti";
+import { MdDelete } from "react-icons/md";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { toastStyles } from '../../../toastConfig';
 
-// trobuleshooting errors
-// import { setLogLevel } from "@azure/logger";
-// setLogLevel("info");
-// console.log(setLogLevel)
 
 const Profile = () => {
   const navigate = useNavigate();
   const userData = useSelector((state) => state.user.user);
-
 
   const account = "mentaleaseblobstore";
   const sasToken =
@@ -32,6 +30,7 @@ const Profile = () => {
     logOutUser(dispatch);
     navigate("/auth/login");
     alert("Logout success😒");
+    
   };
 
   const fetchImages = async () => {
@@ -111,10 +110,12 @@ const Profile = () => {
     fetchImages();
   }, []);
 
+
   return (
     <div className="user_profile_page">
       <div className="profile_img">
         <div className="file_upload">
+
           {file ? (
             <img className="" src={URL.createObjectURL(file)} alt="no pic" />
           ) : userImageUrl ? (
@@ -132,7 +133,7 @@ const Profile = () => {
           />
         </div>
 
-        <button type="submit" onClick={handleSubmit} className="update_btn">
+        <button type="submit" onClick={handleSubmit} className="Upload_btn">
           Upload pic
         </button>
 
@@ -144,17 +145,20 @@ const Profile = () => {
             }}
             className="delbtn"
           >
-          <TiDelete />
+          <MdDelete />
           </button>
         )}
       </div>
 
       <div className="profile_info">
-        <p>Email: user@gmail.com{userData?.email}</p>
-        <p>First Name: Adamsoins </p>
-        <p>Last Name: brians</p>
-        <p>user-id: 232242524{userData?.user_id}</p>
-        
+        <div className="p-elements">
+        <p>Email: {userData?.email}</p>
+        <p>First Name:</p>
+        <p>Last Name: </p>
+        <p>user-id: {userData?.user_id}</p>
+
+        </div>
+       
         <button onClick={handleLogOut} className="logout_btn">
           Logout
         </button>

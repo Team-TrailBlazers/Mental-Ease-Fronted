@@ -1,6 +1,6 @@
 // import React from "react";
 import "./navbar.css";
-import React, { useState } from "react";
+import  { useState } from "react";
 import { Link } from "react-router-dom";
 import { FiAlignJustify } from "react-icons/fi";
 import { GrClose } from "react-icons/gr";
