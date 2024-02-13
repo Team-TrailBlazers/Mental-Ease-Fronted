@@ -6,7 +6,6 @@ import Success from "./Pages/Success";
 import Navbar from "./Components/NavBar/Navbar";
 import Register from "./Pages/Register/Register";
 import Login from "./Pages/Login/Login";
-// import { Home } from './Pages/Home/Home';
 import Profile from "./Pages/UserProfile/Profile";
 import Home  from './Pages/Home/Home';
 import Therapists from "./Pages/Therapists/Therapists";

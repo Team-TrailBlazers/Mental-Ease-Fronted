@@ -99,8 +99,8 @@ const Resource = () => {
         <form className='upload-form'>
           <div className='upload-form_display'>
             {
-              file ? <img className="displayImg" src={URL.createObjectURL(file)} alt="no pic" />
-                : <img className="displayImg" src={Placeholder} alt="nopic" />
+              file ? <img className="displayImg-resource" src={URL.createObjectURL(file)} alt="no pic" />
+                : <img className="displayImg-resource" src={Placeholder} alt="nopic" />
             }
           </div>
           <div className='upload-form_inputs'>
@@ -110,11 +110,12 @@ const Resource = () => {
           </div>
         </form>
       </div>
+
       <div className="row-display">
         {imageUrls.length === 0 ? <h3>😐 No Images Found😐 </h3> : (
           imageUrls && imageUrls.map((blobItem, index) => {
             return (
-              <div key={index} className="card">
+              <div key={index} className="card-resource">
                 <img src={blobItem.url} alt="no pic" />
                 <h3 style={{ width: "90%" }}>{getImageNameWithoutExtension(blobItem.name)}</h3>
                 <button className="del" onClick={() => handleDelete(blobItem.name)} > <AiFillDelete /> </button>

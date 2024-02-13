@@ -1,5 +1,5 @@
 .container {
-    width: 100%;
+    width: 100vw;
     padding-inline: 1rem;
   }
   
@@ -40,7 +40,7 @@
     outline: none;
   }
   
-  .displayImg {
+  .displayImg-resource {
     width: 100%;
     height: 100%;
     border-radius: 2rem;
@@ -61,7 +61,7 @@
     margin-bottom: 1rem;
   }
   
-  .card {
+  .card-resource {
     width: 380px;
     height: auto;
     display: flex;
@@ -72,7 +72,8 @@
     border-radius: 5px;
     margin-top: 1rem;
   }
-  .card > img {
+
+  .card-resource > img {
     width: 100%;
     height: 100%;
     border-radius: 5px;

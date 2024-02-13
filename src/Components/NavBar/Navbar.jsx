@@ -7,7 +7,6 @@ import { GrClose } from "react-icons/gr";
 import "./navbar.css";
 import { useSelector } from "react-redux";
 
-
 function Navbar() {
   const userData = useSelector((state) => state.user.user);
   const [isOpen, setIsOpen] = useState(false);
@@ -18,8 +17,6 @@ function Navbar() {
         {isOpen ? <GrClose  className="close"/> : <FiAlignJustify className="bars"/>}
       </div>
       <ul className={isOpen ? 'open' : ''}>
-
-     
         
         <li>
           <Link to="/" onClick={() => setIsOpen(false)} style={{color: "white"}}>Home</Link>
@@ -29,8 +26,8 @@ function Navbar() {
           userData && (
             <>
              <li>
-          <Link to="/stripe" onClick={() => setIsOpen(false)} style={{color: "white"}}>Stripe</Link>
-        </li>
+              <Link to="/stripe" onClick={() => setIsOpen(false)} style={{color: "white"}}>Stripe</Link>
+            </li>
 
         <li>
           <Link to="/success" onClick={() => setIsOpen(false)} style={{color: "white"}}>Success</Link>
@@ -38,6 +35,14 @@ function Navbar() {
 
         <li>
           <Link to="/therapists" onClick={() => setIsOpen(false)} style={{color: "white"}}>Therapists</Link>
+        </li>
+
+        <li>
+          <Link to="/chat" onClick={() => setIsOpen(false)} style={{color: "white"}}>Chat</Link>
+        </li>
+
+        <li>
+          <Link to="/resources" onClick={() => setIsOpen(false)} style={{color: "white"}}>Resources</Link>
         </li>
 
             </>
