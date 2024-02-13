@@ -22,12 +22,16 @@ function Message() {
       {!showChat ? (
         <div className="joinChatContainer">
           <h3>Chat With Therapist</h3>
-          <input type="text" placeholder="Name..."
+          <input
+            type="text"
+            placeholder="Name..."
             onChange={(event) => {
               setUsername(event.target.value);
             }}
           />
-          <input type="text" placeholder="Session ID..."
+          <input
+            type="text"
+            placeholder="Session ID..."
             onChange={(event) => {
               setRoom(event.target.value);
             }}

@@ -3,7 +3,6 @@ import axios from "axios";
 import { apidomain } from "./../Utils/apiDomain";
 
 function StripePayment() {
-
   const UserID = "15";
   const handleCheckout = async () => {
     console.log("Button clicked");

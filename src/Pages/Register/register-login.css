@@ -1,129 +1,131 @@
-
-.register_page{
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    margin: auto;
+.register_page {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  margin: auto;
 }
 
-.register_title{
-    font-size: 25px;
-    font-weight: 600;
-    margin: 15px 0;
-    text-align: center;
+.register_title {
+  font-size: 25px;
+  font-weight: 600;
+  margin: 15px 0;
+  text-align: center;
 }
 
 form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px;
-    padding: 20px;
-    border: 1px solid #2e1f1f57;
-    background-color: var(--form-bg-color);
-    border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #2e1f1f57;
+  background-color: var(--form-bg-color);
+  border-radius: 14px;
 }
 
 form label {
-    align-self: flex-start;
-    font-size: 18px;
-    font-weight: 600; 
-    color: var(--text-color);
+  align-self: flex-start;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-color);
 }
 
 form input {
-    padding: 5px;
-    align-self: flex-start;
-    width: 90%;
-    font-size: 15px;
-    border-radius: 5px;
-    border: 1.5px #333 solid;
+  padding: 5px;
+  align-self: flex-start;
+  width: 90%;
+  font-size: 15px;
+  border-radius: 5px;
+  border: 1.5px #333 solid;
 }
 
 .auth_button {
-    position: relative;
-	padding: 10px 20px;
-	background-color: var(--button-color);
-    color: var(--white-color);
-	border: none;
-	border-radius: 10px;
-	cursor: pointer;
-    font-size: 18px;
-    width: 40%;
+  position: relative;
+  padding: 10px 20px;
+  background-color: var(--button-color);
+  color: var(--white-color);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  width: 40%;
 }
 
-.auth_button.loading{
-    cursor: not-allowed;
+.auth_button.loading {
+  cursor: not-allowed;
 }
 
 .spinner {
-	position: absolute;
-	width: 20px;
-	height: 20px;
-	border: 2px solid #f3f3f3;
-	border-top: 2px solid #3498db;
-	border-radius: 50%;
-	animation: spin 1s linear infinite;
-	right: 10px;
-	top: 50%;
-	transform: translateY(-50%); 
-  }
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #f3f3f3;
+  border-top: 2px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
 
-  @keyframes spin {
-	0% { transform: translateY(-50%) rotate(0deg); }
-	100% { transform: translateY(-50%) rotate(360deg); }
+@keyframes spin {
+  0% {
+    transform: translateY(-50%) rotate(0deg);
   }
-
+  100% {
+    transform: translateY(-50%) rotate(360deg);
+  }
+}
 
 form button:hover {
-    background-color: var(--hover-btn-color);
+  background-color: var(--hover-btn-color);
 }
 
 /* media query at max-width of 600px */
 @media screen and (max-width: 600px) {
-    .register_page {
-        width: 100%;
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
+  .register_page {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
 
-    .register_title{
-        font-size: 20px;
-        margin: 5px 0;
-    }
+  .register_title {
+    font-size: 20px;
+    margin: 5px 0;
+  }
 
-    form {
-        margin: 10px;
-        padding: 10px;
-    }
+  form {
+    margin: 10px;
+    padding: 10px;
+  }
 
-    form label {
-        font-size: 16px;
-        font-weight: 500; 
-    }
+  form label {
+    font-size: 16px;
+    font-weight: 500;
+  }
 
-    form input {
-        padding: 5px;
-        width: 95%;
-        font-size: 13px;
-        border-radius: 3px;
-    }
+  form input {
+    padding: 5px;
+    width: 95%;
+    font-size: 13px;
+    border-radius: 3px;
+  }
 
-    form button {
-        padding: 7px 10px;
-        width: 60%;
-        font-size: 15px;
-        font-weight: 500;
-        border-radius: 7px;
-    }
+  form button {
+    padding: 7px 10px;
+    width: 60%;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 7px;
+  }
 }
 
 @media screen and (max-width: 320px) {
-    .register_title{
-        font-size: 15px;
-        margin: 5px 0;
-    }
+  .register_title {
+    font-size: 15px;
+    margin: 5px 0;
+  }
 }

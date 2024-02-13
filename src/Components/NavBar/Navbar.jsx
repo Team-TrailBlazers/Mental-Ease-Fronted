@@ -11,68 +11,109 @@ function Navbar() {
   const userData = useSelector((state) => state.user.user);
   const [isOpen, setIsOpen] = useState(false);
 
-  return ( 
+  return (
     <nav>
       <div onClick={() => setIsOpen(!isOpen)} className="burger">
-        {isOpen ? <GrClose  className="close"/> : <FiAlignJustify className="bars"/>}
+        {isOpen ? (
+          <GrClose className="close" />
+        ) : (
+          <FiAlignJustify className="bars" />
+        )}
       </div>
-      <ul className={isOpen ? 'open' : ''}>
-        
+      <ul className={isOpen ? "open" : ""}>
         <li>
-          <Link to="/" onClick={() => setIsOpen(false)} style={{color: "white"}}>Home</Link>
+          <Link
+            to="/"
+            onClick={() => setIsOpen(false)}
+            style={{ color: "white" }}
+          >
+            Home
+          </Link>
         </li>
 
-        {
-          userData && (
-            <>
-             <li>
-              <Link to="/stripe" onClick={() => setIsOpen(false)} style={{color: "white"}}>Stripe</Link>
+        {userData && (
+          <>
+            <li>
+              <Link
+                to="/stripe"
+                onClick={() => setIsOpen(false)}
+                style={{ color: "white" }}
+              >
+                Stripe
+              </Link>
             </li>
 
-        <li>
-          <Link to="/success" onClick={() => setIsOpen(false)} style={{color: "white"}}>Success</Link>
-        </li>
-
-        <li>
-          <Link to="/therapists" onClick={() => setIsOpen(false)} style={{color: "white"}}>Therapists</Link>
-        </li>
-
-        <li>
-          <Link to="/chat" onClick={() => setIsOpen(false)} style={{color: "white"}}>Chat</Link>
-        </li>
-
-        <li>
-          <Link to="/resources" onClick={() => setIsOpen(false)} style={{color: "white"}}>Resources</Link>
-        </li>
-
-            </>
-          )
-        }
-
-       
-        {
-          userData ? (
             <li>
-            <Link to="/profile" onClick={() => setIsOpen(false)} style={{color: "white"}}>Profile</Link>
-          </li>
+              <Link
+                to="/success"
+                onClick={() => setIsOpen(false)}
+                style={{ color: "white" }}
+              >
+                Success
+              </Link>
+            </li>
 
-          ) : (
-            <>
             <li>
-            <Link to="/auth/register" onClick={() => setIsOpen(false)} style={{color: "white"}} >Register</Link>
-          </li>
-  
-          <li>
-            <Link to="/auth/login"  style={{color: "white"}} >Login</Link>
-          </li>
+              <Link
+                to="/therapists"
+                onClick={() => setIsOpen(false)}
+                style={{ color: "white" }}
+              >
+                Therapists
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                to="/chat"
+                onClick={() => setIsOpen(false)}
+                style={{ color: "white" }}
+              >
+                Chat
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                to="/resources"
+                onClick={() => setIsOpen(false)}
+                style={{ color: "white" }}
+              >
+                Resources
+              </Link>
+            </li>
           </>
-          )
-        }
-       
+        )}
 
+        {userData ? (
+          <li>
+            <Link
+              to="/profile"
+              onClick={() => setIsOpen(false)}
+              style={{ color: "white" }}
+            >
+              Profile
+            </Link>
+          </li>
+        ) : (
+          <>
+            <li>
+              <Link
+                to="/auth/register"
+                onClick={() => setIsOpen(false)}
+                style={{ color: "white" }}
+              >
+                Register
+              </Link>
+            </li>
 
-       
-
+            <li>
+              <Link to="/auth/login" style={{ color: "white" }}>
+                Login
+              </Link>
+            </li>
+          </>
+        )}
       </ul>
     </nav>
   );

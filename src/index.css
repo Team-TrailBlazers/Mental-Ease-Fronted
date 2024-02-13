@@ -1,25 +1,22 @@
-
 /* root */
-:root{
-  --main-color : ##F9F9F9;
-  --button-color: #176B87;  
+:root {
+  --main-color: ##f9f9f9;
+  --button-color: #176b87;
   --white-color: #fff;
   --hover-btn-color: #007bff;
-  --form-bg-color: #F7F7F7;
+  --form-bg-color: #f7f7f7;
   --text-color: #333;
   --homePage-bg-color: #adbc9f9c;
-  --color-white: #fff;  
+  --color-white: #fff;
   --border-color: #333;
   --navbar-bg-color: #414141c0;
 }
 
-
 /* body */
-body{
+body {
   background-color: var(--main-color);
-  font-family: 'Roboto', sans-serif; 
+  font-family: "Roboto", sans-serif;
 }
-
 
 * {
   overflow-x: hidden;
@@ -27,6 +24,3 @@ body{
   padding: 0;
   box-sizing: border-box;
 }
-
-
- 
