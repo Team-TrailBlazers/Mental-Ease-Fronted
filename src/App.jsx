@@ -10,6 +10,7 @@ import Login from "./Pages/Login/Login";
 import Profile from "./Pages/UserProfile/Profile";
 import Home  from './Pages/Home/Home';
 import Therapists from "./Pages/Therapists/Therapists";
+import Message from './Components/Messaging/Message';
 
 
 function App() {
@@ -25,6 +26,8 @@ function App() {
           <Route path="/success" element={<Success />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/therapists" element={<Therapists />} />
+          <Route path="/chat" element={<Message />} />
+          <Route path="/resources" element={<Resources />} />
 
         </Routes>
         <ToastContainer />
