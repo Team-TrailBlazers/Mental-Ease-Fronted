@@ -11,6 +11,7 @@ import Profile from "./Pages/UserProfile/Profile";
 import Home  from './Pages/Home/Home';
 import Therapists from "./Pages/Therapists/Therapists";
 import Message from './Components/Messaging/Message';
+import Resource from './Pages/ResourceGallery/Resource';
 
 
 function App() {
@@ -27,7 +28,7 @@ function App() {
           <Route path="/profile" element={<Profile />} />
           <Route path="/therapists" element={<Therapists />} />
           <Route path="/chat" element={<Message />} />
-          <Route path="/resources" element={<Resources />} />
+          <Route path="/resources" element={<Resource />} />
 
         </Routes>
         <ToastContainer />
