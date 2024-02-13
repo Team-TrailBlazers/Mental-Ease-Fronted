@@ -39,6 +39,14 @@ function Navbar() {
           <Link to="/auth/login" onClick={() => setIsOpen(false)} style={{color: "white"}} >Login</Link>
         </li>
 
+        <li>
+          <Link to="/chat" onClick={() => setIsOpen(false)} style={{color: "white"}} >chat</Link>
+        </li>
+
+        <li>
+          <Link to="/resources" onClick={() => setIsOpen(false)} style={{color: "white"}} >resources</Link>
+        </li>
+
       </ul>
     </nav>
   );
